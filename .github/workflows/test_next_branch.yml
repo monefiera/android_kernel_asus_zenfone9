@@ -67,19 +67,19 @@ jobs:
       run: |
         cd /home/runner/work/android_kernel_asus_zenfone9/android_kernel_asus_zenfone9
         rm defconfig
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/defconfig
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/defconfig
         cd drivers/input/
         rm input.c
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/input.c
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/input.c
         cd ../../drivers/tty/
         rm pty.c
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/pty.c
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/pty.c
         cd ../../fs/
         rm exec.c open.c read_write.c stat.c
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/exec.c
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/open.c
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/read_write.c
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/stat.c
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/exec.c
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/open.c
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/read_write.c
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/stat.c
  
     - name: Add Susfs
       run: |
@@ -89,7 +89,7 @@ jobs:
         cp susfs4ksu/kernel_patches/fs/* fs/
         cp susfs4ksu/kernel_patches/include/linux/* include/linux/
         cd /home/runner/work/android_kernel_asus_zenfone9/android_kernel_asus_zenfone9/KernelSU-Next
-        wget https://raw.githubusercontent.com/fityanferry/manual-hooks/refs/heads/main/zenfone9/latest_ksu.patch
+        wget https://raw.githubusercontent.com/monefiera/manual-hooks/refs/heads/main/zenfone9/latest_ksu.patch
         echo ""
         echo "## ADD SUSFS TO KERNELSU-NEXT"
         patch -p1 < latest_ksu.patch
